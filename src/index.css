@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-ink-950 text-ink-100;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  body {
+    @apply bg-ink-950 min-h-screen;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-ink-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-ink-600 rounded-full;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-ember-500 hover:bg-ember-400 text-white font-medium px-5 py-2.5 rounded-lg transition-all duration-200 active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent hover:bg-ink-800 text-ink-300 hover:text-ink-100 font-medium px-4 py-2 rounded-lg transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-ink-900 border border-ink-800 rounded-xl;
+  }
+
+  .input-field {
+    @apply bg-ink-800 border border-ink-700 text-ink-100 placeholder-ink-500 rounded-lg px-4 py-2.5 w-full focus:outline-none focus:border-ember-500 transition-colors duration-200;
+  }
+
+  .label {
+    @apply text-ink-400 text-sm font-medium mb-1.5 block;
+  }
+}
